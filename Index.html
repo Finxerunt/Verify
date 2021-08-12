@@ -13,74 +13,42 @@
       our society and create solutions to them, in order to foster a greater, better society." name="description">
     <meta content="Socioeconomic, laboratory, ISL, Finxerunt" name="keywords">
     <meta content="og:image" content= "https://files.socioeconlabs.org/Images/Meta.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="https://files.socioeconlabs.org/images/favicon.png"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-
-<p></p>
-</body>
-</html>
-<p><br />
-<title>International Socioeconomics Laboratory</title>
-<style type="text/css">.center {
-  	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-	text-align: center;
-    margin: 1px auto 1px;
-	vertical-align: middle;
-	max-width:400px;
-	max-height:400px;
-	width: auto;
-	height: auto;	
-	}
-	.textformat{
-	display: table;
-  	margin-left: auto;
-  	margin-right: auto;
-  	width: 50%;
-  	text-align: center;
-  	font-family: Sans-serif;
-	font-size: 20px;
-	}
-</style>
-</p>
-
-<p><img alt="International Socioeconomics Laboratory" class="center" src="https://files.socioeconlabs.org/images/White_Logo.png" /></p>
-
-<div class="textformat">
-    Certificate storage database server for the International Socioeconomics Laboratory
-<br>
-    If you have any questions please email us at <a href =mailto:info@socioeconlabs.org">info@socioeconlabs.org</a>
-</div>
 
 
-<div class="textformat"></div>
-
-<div class="textformat">
-<p><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:14px;"><em>The International Socioeconomics Laboratory™  is a 
-    global research laboratory made up of young adults that strive to find the most adequate solutions to current socio-economic problems. 
-    We make use of existing records and data to create our own comprehensive models and studies to find plausible routes to the root cause 
-    of these problems and see what can be done about them or what knowledge can be acquired. However, our information collection is not 
-    limited to what is already in sight; though it may be more difficult given the unprecedented times, we also look to collect information
-     and data through surveys and soon, experiments as well. The goal of the Laboratory is clear; assess and address the issues that face
-      our society and create solutions to them, in order to foster a greater, better society.</em></span></span></p>
 
 
-<p></p>
-</div>
+
+<div class="searchForm">
+    <img alt="International Socioeconomics Laboratory" class="center" src="White_Logo.png" />
+    <p id="verify">Verify a certificate</p>
+    <form onSubmit = "return false">
+        <div class="urlInput">
+            <p>
+                <input type="text" id="url" required />
+                <label for="url">Enter Certificate ID</label>
+            </p>
+        </div>
+        
+        <div class = "directions">The Certificate ID can be found at the bottom of each certificate.</div>
+        <button onclick="getURL()" type="submit">VALIDATE</button>
+    </form>
+
     
+    
+</div>
 
+<script>
+    const getURL = () =>{
+        if(url.value !== ""){
+            window.location.href = `https://verify.socioeconlabs.org/code/${url.value}.pdf`;
+        }
+    }
+</script>
 
+</body>
 </html>
